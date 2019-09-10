@@ -173,6 +173,81 @@
                                 <td><input type="text"></td>
                                 <td><input type="text"></td>
                             </tr>
+                            <tr style="display: none;" tr-num="6">
+                                <td>6</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr style="display: none;" tr-num="7">
+                                <td>7</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr style="display: none;" tr-num="8">
+                                <td>8</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr style="display: none;" tr-num="9">
+                                <td>9</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr style="display: none;" tr-num="10">
+                                <td>10</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr style="display: none;" tr-num="11">
+                                <td>11</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr style="display: none;" tr-num="12">
+                                <td>12</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr style="display: none;" tr-num="13">
+                                <td>13</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr style="display: none;" tr-num="14">
+                                <td>14</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr style="display: none;" tr-num="15">
+                                <td>15</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr style="display: none;" tr-num="16">
+                                <td>16</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr style="display: none;" tr-num="17">
+                                <td>17</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr style="display: none;" tr-num="18">
+                                <td>18</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr style="display: none;" tr-num="19">
+                                <td>19</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
+                            <tr style="display: none;" tr-num="20">
+                                <td>20</td>
+                                <td><input type="text"></td>
+                                <td><input type="text"></td>
+                            </tr>
                         </tbody>
                         <tfoot>
                             <tr>
@@ -384,13 +459,15 @@
             });
 
             $('.btn-add-more-refer-mail').click(function(){
-                for (var i = 0; i < 15; i++) {
-                    var _newReferMailRow = $('#refer-by-mails-popup table tbody tr:last-child').clone();
-                    var _newNum = parseInt(_newReferMailRow.attr('tr-num')) + 1;
-                    _newReferMailRow.attr('tr-num', _newNum);
-                    _newReferMailRow.find('td:first-child').html(_newNum);
-                    $('#refer-by-mails-popup table tbody').append(_newReferMailRow);
-                }
+                // for (var i = 0; i < 15; i++) {
+                //     var _newReferMailRow = $('#refer-by-mails-popup table tbody tr:last-child').clone();
+                //     var _newNum = parseInt(_newReferMailRow.attr('tr-num')) + 1;
+                //     _newReferMailRow.attr('tr-num', _newNum);
+                //     _newReferMailRow.find('td:first-child').html(_newNum);
+                //     $('#refer-by-mails-popup table tbody').append(_newReferMailRow);
+                // }
+                $('#refer-by-mails-popup table tbody tr').show();
+                $(this).hide();
                 
             });
 

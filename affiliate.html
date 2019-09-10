@@ -145,7 +145,8 @@
                                     <p>By creating a reflink, you are indicating that you have read and agreed to the <a style="color: #ff3600;" href="#">Terms of Service.</a></p>
                                 </div>
                                 <div class="affiliate-create-reflink">
-                                    <button type="button" class="cus-btn yellow has-shadow f20">CREATE YOUR FIRST REFLINK</button>
+                                    <input type="text" name="" id="" value="http://google.com">
+                                    <button type="button" class="cus-btn yellow has-shadow f20 click-to-copy-btn">Copy Link</button>
                                     <!-- <a href="#" class="cus-btn yellow has-shadow">CREATE YOUR FIRST REFLINK</a> -->
                                 </div>
                                 <div class="has-left-border has-shadow">
@@ -157,8 +158,8 @@
                             <div class="affiliate-bottom">
                                 <div class="aff-tabs">
                                     <div class="aff-tabs-nav">
-                                        <span class="active" tab-content="#reward-feed">Reward Feed</span>
-                                        <span tab-content="#reflink">Reflink</span>
+                                        <a href="#"><span class="active" tab-content="#reward-feed">Reward Feed</span></a>
+                                        <a href="#"><span tab-content="#reflink">Reflink</span></a>
                                     </div>
                                     <div class="aff-tabs-content-block">
                                         <div class="aff-tabs-content has-shadow active" id="reward-feed">
@@ -193,6 +194,15 @@
                                                             <th>Amount <span class="tool-tip">?</span></th>
                                                             <th>Status <span class="tool-tip">?</span></th>
                                                             <th>Reward Eta <span class="tool-tip">?</span></th>
+                                                            <th class="thead-pagination">
+                                                                <div class="shop-search-paging affiliate-paging">
+                                                                    <ul class="pagination">
+                                                                        <li class="prev disabled"><span>«</span></li>
+                                                                        <li class="active"><a href="#">1</a></li>
+                                                                        <li class="next"><a href="#">»</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
@@ -303,6 +313,12 @@
 
     <script>
         $(document).ready(function () {
+            $('.click-to-copy-btn').click(function(){
+                var _tempElement = $("<input>");
+                $(this).parent().find('input').val($(this).parent().find('input').val()).select();
+                document.execCommand("copy");
+            });
+
             $('.top-header .right-box a.ico-user-login').click(function(){
                 $(this).parent().toggleClass('active');
                 $(this).toggleClass('active');
@@ -329,14 +345,14 @@
                 document.execCommand("copy");
             });
 
-            $('.aff-tabs .aff-tabs-nav span').click(function(){
-                var _tabContentId = $(this).attr('tab-content');
-                $('.aff-tabs-content').removeClass('active');
-                $('.aff-tabs-content'+_tabContentId).addClass('active');
+            // $('.aff-tabs .aff-tabs-nav span').click(function(){
+            //     var _tabContentId = $(this).attr('tab-content');
+            //     $('.aff-tabs-content').removeClass('active');
+            //     $('.aff-tabs-content'+_tabContentId).addClass('active');
 
-                $('.aff-tabs .aff-tabs-nav span').removeClass('active');
-                $(this).addClass('active');
-            });
+            //     $('.aff-tabs .aff-tabs-nav span').removeClass('active');
+            //     $(this).addClass('active');
+            // });
         });
     </script>
 </body>
